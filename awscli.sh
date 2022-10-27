@@ -1,1 +1,3 @@
-aws ec2 create-vpc --cidr-block 10.0.0.0/16 --query Vpc.VpcId --output
+aws ec2 create-vpc \
+    --cidr-block 10.0.0.0/16 \
+    --tag-specification ResourceType=vpc,Tags=[{Key=Name,Value=MyVpc}]
