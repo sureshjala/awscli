@@ -1,0 +1,14 @@
+pipeline {
+    stages {
+        stage (vcs) {
+            steps {
+                git branch: 'master', url: 'https://github.com/sureshjala/awscli.git'
+            }
+        }
+        stage (excute) {
+            steps {
+                sh './awscli.sh'
+            }
+        }
+    }
+}
