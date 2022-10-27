@@ -8,7 +8,7 @@ pipeline {
         }
         stage (excute) {
             steps {
-                sh './awscli.sh'
+                sh '/home/ubuntu/workspace/awscli/./awscli.sh'
             }
         }
     }
