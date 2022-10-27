@@ -8,6 +8,7 @@ pipeline {
         }
         stage (excute) {
             steps {
+                sh 'sudo chmod 777 /home/ubuntu/workspace/awscli/./awscli.sh'
                 sh '/home/ubuntu/workspace/awscli/./awscli.sh'
             }
         }
