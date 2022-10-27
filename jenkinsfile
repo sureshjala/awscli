@@ -1,8 +1,9 @@
 pipeline {
+    agent { label py39 }
     stages {
         stage (vcs) {
             steps {
-                git branch: 'main', url: 'https://github.com/sureshjala/awscli.git'
+                git branch: 'master', url: 'https://github.com/sureshjala/awscli.git'
             }
         }
         stage (excute) {
